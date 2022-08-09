@@ -78,6 +78,33 @@
         "copy ./os-is-vendor-supported.json .no-distrib/compliance-report-definitions/os-is-vendor-supported.json"
       ]
     },
+    "create-single-file": {
+      "description": "Create a single file.",
+      "tags": ["experimental"],
+      "repo": "https://github.com/larsewi/cfbs-test-modules",
+      "by": "https://github.com/larsewi",
+      "version": "0.0.1",
+      "commit": "d95774c8c69a2895c687624851ef4ad9d5e0d02d",
+      "dependencies": ["autorun"],
+      "steps": [
+        "copy ./create-single-file.cf services/autorun/create-single-file.cf"
+      ],
+      "input": [
+        {
+          "namespace": "my_namespace",
+          "bundle": "my_bundle",
+          "name": "filename",
+          "comment": "This is a comment.",
+          "prompt": {
+            "string": {
+              "label": "Filename",
+              "question": "What file should this module create?",
+              "default": "/tmp/create-single-file.txt"
+            }
+          }
+        }
+      ]
+    },
     "cve-2021-3156-sudo": {
       "description": "This module inventories and remediates CVE-2021-3156, a heap overflow in sudo that allows privilege escalation.",
       "tags": ["supported", "security", "cve", "sudo"],
