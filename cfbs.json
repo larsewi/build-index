@@ -1210,8 +1210,8 @@
       "tags": ["promise-type", "experimental"],
       "repo": "https://github.com/cfengine/modules",
       "by": "https://github.com/nickanderson",
-      "version": "0.1.0",
-      "commit": "fecb785cec68bb17e080b802ab9b79ad5ed78906",
+      "version": "0.2.0",
+      "commit": "fef723c3e564ee5ffa74bf57d94f173344a07ff8",
       "subdirectory": "promise-types/appstreams",
       "dependencies": ["library-for-promise-types-in-python"],
       "steps": [
