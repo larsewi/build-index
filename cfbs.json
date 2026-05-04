@@ -595,8 +595,8 @@
       "repo": "https://github.com/cfengine/modules",
       "by": "https://github.com/nickanderson",
       "subdirectory": "inventory/inventory-smartctl",
-      "version": "1.0.1",
-      "commit": "b63089ef352738be7e71abb0215f75bc9c9a8b6f",
+      "version": "1.0.3",
+      "commit": "eede7bc4131d3e9a9b232c3bf83998b075c83fbb",
       "steps": [
         "copy policy.cf services/cfbs/modules/inventory-smartctl/policy.cf",
         "policy_files services/cfbs/modules/inventory-smartctl/policy.cf",
