@@ -598,8 +598,8 @@
       "version": "1.0.1",
       "commit": "b63089ef352738be7e71abb0215f75bc9c9a8b6f",
       "steps": [
-        "copy main.cf services/cfbs/modules/inventory-smartctl/main.cf",
-        "policy_files services/cfbs/modules/inventory-smartctl/main.cf",
+        "copy policy.cf services/cfbs/modules/inventory-smartctl/policy.cf",
+        "policy_files services/cfbs/modules/inventory-smartctl/policy.cf",
         "bundles inventory_smartctl:main"
       ]
     },
