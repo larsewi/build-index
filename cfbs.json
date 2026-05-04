@@ -589,6 +589,19 @@
         "json augments.json def.json"
       ]
     },
+    "inventory-smartctl": {
+      "description": "Adds reporting data (inventory) for the status of S.M.A.R.T. drive health.",
+      "tags": ["supported", "inventory"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/nickanderson",
+      "version": "1.0.0",
+      "commit": "52df850b1abd72d92472579469262c5d0e9fecde",
+      "steps": [
+        "copy main.cf services/cfbs/modules/inventory-smartctl/main.cf",
+        "policy_files services/cfbs/modules/inventory-smartctl/main.cf",
+        "bundles inventory_smartctl:main"
+      ]
+    },
     "inventory-kernel-boot-params": {
       "description": "Adds reporting data (inventory) for kernel parameters set during system boot.",
       "tags": ["supported", "inventory"],
