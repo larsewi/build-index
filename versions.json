@@ -5849,5 +5849,23 @@
         "library-for-promise-types-in-python"
       ]
     }
+  },
+  "inventory-smartctl": {
+    "1.0.0": {
+      "commit": "52df850b1abd72d92472579469262c5d0e9fecde",
+      "timestamp": 1777910096201,
+      "archive_url": "modules/inventory-smartctl/52df850b1abd72d92472579469262c5d0e9fecde.tar.gz",
+      "archive_sha256": "5bfd0e2f74431edfa4dae4f9c58e1d94a78617a592b4601ce09ca53aa99c018b",
+      "readme_url": "modules/inventory-smartctl/52df850b1abd72d92472579469262c5d0e9fecde.md",
+      "readme_sha256": "8d5ef18955197107a6c51a85854980ea0caa6a3cf05ee7c1c33bf78e30b0f184",
+      "steps": [
+        "copy main.cf services/cfbs/modules/inventory-smartctl/main.cf",
+        "policy_files services/cfbs/modules/inventory-smartctl/main.cf",
+        "bundles inventory_smartctl:main"
+      ],
+      "subdirectory": "",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules"
+    }
   }
 }
