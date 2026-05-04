@@ -5882,6 +5882,22 @@
       "subdirectory": "inventory/inventory-smartctl",
       "by": "https://github.com/nickanderson",
       "repo": "https://github.com/cfengine/modules"
+    },
+    "1.0.3": {
+      "commit": "eede7bc4131d3e9a9b232c3bf83998b075c83fbb",
+      "timestamp": 1777912456058,
+      "archive_url": "modules/inventory-smartctl/eede7bc4131d3e9a9b232c3bf83998b075c83fbb.tar.gz",
+      "archive_sha256": "7b1fe486efeb7de1ae98d9b4bd5feaaa2f13ace8616d86b54c276cf949ce8983",
+      "readme_url": "modules/inventory-smartctl/eede7bc4131d3e9a9b232c3bf83998b075c83fbb.md",
+      "readme_sha256": "ad1063ad8bc82b6c55ac25a4915f8bd339a5e5401cf0be56d3f02582392450a5",
+      "steps": [
+        "copy policy.cf services/cfbs/modules/inventory-smartctl/policy.cf",
+        "policy_files services/cfbs/modules/inventory-smartctl/policy.cf",
+        "bundles inventory_smartctl:main"
+      ],
+      "subdirectory": "inventory/inventory-smartctl",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules"
     }
   }
 }
