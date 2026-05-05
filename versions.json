@@ -792,6 +792,22 @@
       "subdirectory": "",
       "by": "https://github.com/nickanderson",
       "repo": "https://github.com/nickanderson/cfengine-lynis"
+    },
+    "3.1.6": {
+      "commit": "60b97c3e8784238d42ddb33532c7a86de7cde85d",
+      "timestamp": 1778021296516,
+      "archive_url": "modules/lynis/60b97c3e8784238d42ddb33532c7a86de7cde85d.tar.gz",
+      "archive_sha256": "26bcb3bfbc9239ecfe6108cd55e9437453881eb6f2edeb68017ed35841978d7c",
+      "readme_url": "modules/lynis/60b97c3e8784238d42ddb33532c7a86de7cde85d.org",
+      "readme_sha256": "147d12864348df5204ee1290b48542e8a41ed1bf9b8c178860d5d8a1f3308410",
+      "steps": [
+        "copy policy/main.cf services/lynis/main.cf",
+        "json cfbs/def.json def.json",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/nickanderson/cfengine-lynis"
     }
   },
   "masterfiles": {
@@ -4060,6 +4076,24 @@
       "archive_url": "modules/compliance-report-lynis/dd645be54d7d9392b3ef7a5ab0038572070081c7.tar.gz",
       "archive_sha256": "919fbb20cc5f8eaf71ac85344f805b038240d44af95923bf312eeba05205e9d8",
       "readme_url": "modules/compliance-report-lynis/dd645be54d7d9392b3ef7a5ab0038572070081c7.org",
+      "readme_sha256": "64aea21bde1a527e28fbc1080b32c6e79c0b409c584a4b9bf830473452ad1713",
+      "steps": [
+        "copy ./generated-compliance-report.json .no-distrib/compliance-report-definitions/lynis-compliance-report.json"
+      ],
+      "subdirectory": "compliance-reports",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/nickanderson/cfengine-lynis",
+      "dependencies": [
+        "compliance-report-imports",
+        "lynis"
+      ]
+    },
+    "3.1.6": {
+      "commit": "c427b0cfd854204a39b3c5aaea907d498577c764",
+      "timestamp": 1778021295895,
+      "archive_url": "modules/compliance-report-lynis/c427b0cfd854204a39b3c5aaea907d498577c764.tar.gz",
+      "archive_sha256": "c98ade71fbccb1bc559fb40e42d2a858aa4c4c490e61a38daf6bb6a78fa93e87",
+      "readme_url": "modules/compliance-report-lynis/c427b0cfd854204a39b3c5aaea907d498577c764.org",
       "readme_sha256": "64aea21bde1a527e28fbc1080b32c6e79c0b409c584a4b9bf830473452ad1713",
       "steps": [
         "copy ./generated-compliance-report.json .no-distrib/compliance-report-definitions/lynis-compliance-report.json"
