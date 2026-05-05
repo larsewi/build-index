@@ -1577,8 +1577,8 @@
     "surf-cfengine-library": {
       "description": "SURF CFEngine Library (SCL) for building services with json/mustache.",
       "tags": ["inventory", "lib", "management", "experimental"],
-      "repo": "https://github.com/basvandervlies/cf_surfsara_lib",
-      "by": "https://github.com/basvandervlies",
+      "repo": "https://codeberg.org/SURF/scl",
+      "by": "https://codeberg.org/basvandervlies",
       "version": "1.8.2",
       "commit": "a08abbf459836e4fcbc23551a59ffb415d3ef3b7",
       "dependencies": ["autorun", "promise-type-groups"],
