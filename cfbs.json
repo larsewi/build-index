@@ -1056,10 +1056,10 @@
       "tags": ["supported", "base"],
       "repo": "https://github.com/cfengine/masterfiles",
       "by": "https://github.com/cfengine",
-      "version": "3.24.4",
-      "commit": "ed4628805e352fd68d7d72664c859df5a4bb0715",
+      "version": "3.27.1",
+      "commit": "15d8ca2ca951db3ddf197b90c9dea6ef75f5fa89",
       "steps": [
-        "run EXPLICIT_VERSION=3.24.4 EXPLICIT_RELEASE=1 ./prepare.sh -y",
+        "run EXPLICIT_VERSION=3.27.1 EXPLICIT_RELEASE=1 ./prepare.sh -y",
         "copy ./ ./"
       ]
     },
