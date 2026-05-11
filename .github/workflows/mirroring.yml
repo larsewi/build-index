@@ -15,6 +15,7 @@ permissions:
 
 jobs:
   mirroring:
+    if: github.repository_owner == 'cfengine' || github.repository_owner == 'mendersoftware' || github.repository_owner == 'NorthernTechHQ'
     runs-on: ubuntu-latest
     env:
       AWS_REGION: us-east-1
