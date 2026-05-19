@@ -5963,5 +5963,25 @@
       "by": "https://github.com/nickanderson",
       "repo": "https://github.com/cfengine/modules"
     }
+  },
+  "dirtyfrag": {
+    "0.1.0": {
+      "commit": "c538640f49d38e7f19193fcef2f3fbf24bac4c75",
+      "timestamp": 1779229359227,
+      "archive_url": "modules/dirtyfrag/c538640f49d38e7f19193fcef2f3fbf24bac4c75.tar.gz",
+      "archive_sha256": "ec94006f640defce0feea5a23c498371f6e751588c6da9e6cf96f6102f18c88b",
+      "readme_url": "modules/dirtyfrag/c538640f49d38e7f19193fcef2f3fbf24bac4c75.md",
+      "readme_sha256": "ac9dcb4897e62bee2b284539af4ec825f859dadcfd71652610daaf36b06e3b5a",
+      "steps": [
+        "copy dirtyfrag.cf services/cfbs/modules/dirtyfrag/dirtyfrag.cf",
+        "copy patched-kernels.json services/cfbs/modules/dirtyfrag/patched-kernels.json",
+        "policy_files services/cfbs/modules/dirtyfrag/dirtyfrag.cf",
+        "bundles dirtyfrag:main",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "security/dirtyfrag",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules"
+    }
   }
 }
