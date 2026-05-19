@@ -367,6 +367,51 @@
       "dependencies": ["autorun", "every-minute"],
       "steps": ["json def.json def.json"]
     },
+    "dirtyfrag": {
+      "description": "Detect and optionally mitigate Dirty Frag CVE-2026-43284 and CVE-2026-43500 in the Linux kernel.",
+      "tags": ["supported", "security", "inventory", "detection", "mitigation"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/nickanderson",
+      "version": "0.1.0",
+      "commit": "c538640f49d38e7f19193fcef2f3fbf24bac4c75",
+      "subdirectory": "security/dirtyfrag",
+      "steps": [
+        "copy dirtyfrag.cf services/cfbs/modules/dirtyfrag/dirtyfrag.cf",
+        "copy patched-kernels.json services/cfbs/modules/dirtyfrag/patched-kernels.json",
+        "policy_files services/cfbs/modules/dirtyfrag/dirtyfrag.cf",
+        "bundles dirtyfrag:main",
+        "input ./input.json def.json"
+      ],
+      "input": [
+        {
+          "type": "string",
+          "variable": "mitigate_esp",
+          "namespace": "dirtyfrag",
+          "bundle": "main",
+          "label": "Mitigate CVE-2026-43284 (ESP/IPComp)",
+          "question": "Blacklist esp4, esp6, ipcomp, ipcomp6 kernel modules? (breaks IPsec) [true/false]",
+          "default": "false"
+        },
+        {
+          "type": "string",
+          "variable": "mitigate_rxrpc",
+          "namespace": "dirtyfrag",
+          "bundle": "main",
+          "label": "Mitigate CVE-2026-43500 (RxRPC)",
+          "question": "Blacklist rxrpc kernel module? (breaks AFS/RxRPC) [true/false]",
+          "default": "false"
+        },
+        {
+          "type": "string",
+          "variable": "mitigate_userns",
+          "namespace": "dirtyfrag",
+          "bundle": "main",
+          "label": "Mitigate CVE-2026-43284 via user namespaces",
+          "question": "Set user.max_user_namespaces=0? (blocks ESP exploit without disabling IPsec, may break rootless containers) [true/false]",
+          "default": "false"
+        }
+      ]
+    },
     "disable-prelinking": {
       "description": "Disables prelinking.",
       "tags": ["supported", "security"],
