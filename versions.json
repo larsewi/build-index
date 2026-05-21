@@ -5983,5 +5983,23 @@
       "by": "https://github.com/nickanderson",
       "repo": "https://github.com/cfengine/modules"
     }
+  },
+  "inventory-selinux-modules": {
+    "0.1.0": {
+      "commit": "731ea94b0d8a9da4371aa07c07b8bed267dc5e8b",
+      "timestamp": 1779405060113,
+      "archive_url": "modules/inventory-selinux-modules/731ea94b0d8a9da4371aa07c07b8bed267dc5e8b.tar.gz",
+      "archive_sha256": "1975d77eb2372c5a39b7ed9df22c8536b0536fafee494f51dcb97be0a6061023",
+      "readme_url": "modules/inventory-selinux-modules/731ea94b0d8a9da4371aa07c07b8bed267dc5e8b.org",
+      "readme_sha256": "4106d5904b2412141e37c4eeaa51d99fa6ef10c4f116a3a2ca436eefb6f0c2b8",
+      "steps": [
+        "copy main.cf services/cfbs/modules/inventory-selinux-modules/main.cf",
+        "policy_files services/cfbs/modules/inventory-selinux-modules/main.cf",
+        "bundles inventory_selinux:semodule_list_modules"
+      ],
+      "subdirectory": "security/inventory-selinux-modules",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules"
+    }
   }
 }
