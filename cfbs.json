@@ -813,6 +813,20 @@
         "bundles inventory_physical_memory:main"
       ]
     },
+    "inventory-selinux-modules": {
+      "description": "Inventory installed SELinux modules and their enabled/disabled status.",
+      "tags": ["supported", "inventory", "security"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/nickanderson",
+      "version": "0.1.0",
+      "commit": "731ea94b0d8a9da4371aa07c07b8bed267dc5e8b",
+      "subdirectory": "security/inventory-selinux-modules",
+      "steps": [
+        "copy main.cf services/cfbs/modules/inventory-selinux-modules/main.cf",
+        "policy_files services/cfbs/modules/inventory-selinux-modules/main.cf",
+        "bundles inventory_selinux:semodule_list_modules"
+      ]
+    },
     "inventory-ssh-host-key-fingerprints": {
       "description": "Adds reporting data (inventory) for the SSH host key fingerprints.",
       "tags": ["inventory", "security", "ssh", "experimental"],
