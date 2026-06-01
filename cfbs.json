@@ -169,6 +169,19 @@
         "copy ./generated-compliance-report.json .no-distrib/compliance-report-definitions/lynis-compliance-report.json"
       ]
     },
+    "compliance-report-fwupd": {
+      "description": "Compliance report for firmware security posture via fwupd HSI and update status.",
+      "tags": ["reporting", "compliance", "security", "hardware"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/nickanderson",
+      "version": "0.1.0",
+      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "subdirectory": "reporting/compliance-report-fwupd",
+      "dependencies": ["inventory-fwupd"],
+      "steps": [
+        "copy fwupd-compliance-report.json .no-distrib/compliance-report-definitions/fwupd-compliance-report.json"
+      ]
+    },
     "compliance-report-os-is-vendor-supported": {
       "description": "Compliance report definition for checking if the current OS version is supported by the vendor.",
       "tags": ["compliance-report", "cfengine-enterprise", "experimental"],
@@ -893,6 +906,21 @@
         "bundles inventory_fde:main"
       ]
     },
+    "inventory-fwupd": {
+      "description": "Inventory hardware firmware versions, pending firmware updates, and host security attributes via fwupd.",
+      "tags": ["inventory", "monitoring", "hardware", "security"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/nickanderson",
+      "version": "0.1.0",
+      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "subdirectory": "inventory/inventory-fwupd",
+      "steps": [
+        "copy policy.cf services/cfbs/modules/inventory-fwupd/policy.cf",
+        "copy fwupd-inventory.mustache services/cfbs/modules/inventory-fwupd/fwupd-inventory.mustache",
+        "policy_files services/cfbs/modules/inventory-fwupd/policy.cf",
+        "bundles inventory_fwupd_main"
+      ]
+    },
     "inventory-windows-services": {
       "description": "Inventory running Windows services.",
       "tags": ["supported", "windows", "inventory", "security"],
@@ -1108,6 +1136,55 @@
         "copy ./maintainers-in-motd.cf services/cfbs/modules/maintainers-in-motd.cf",
         "policy_files services/cfbs/modules/maintainers-in-motd.cf",
         "bundles maintainers_in_motd"
+      ]
+    },
+    "manage-fwupd": {
+      "description": "Ensure fwupd is installed and its refresh timer is enabled. Optionally apply firmware updates for devices matching an allow-list.",
+      "tags": ["management", "hardware", "security"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/nickanderson",
+      "version": "0.1.0",
+      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "subdirectory": "management/manage-fwupd",
+      "dependencies": ["inventory-fwupd"],
+      "steps": [
+        "copy main.cf services/cfbs/modules/manage-fwupd/main.cf",
+        "policy_files services/cfbs/modules/manage-fwupd/main.cf",
+        "bundles manage_fwupd:allowed manage_fwupd:main",
+        "input ./input.json def.json"
+      ],
+      "input": [
+        {
+          "type": "string",
+          "variable": "apply_updates",
+          "namespace": "manage_fwupd",
+          "bundle": "allowed",
+          "label": "Apply firmware updates",
+          "question": "Class expression for when firmware updates should be applied (e.g. 'any', 'linux', '(env_dev|env_qa).Night.(cohort_A|cohort_C)'). Default '!any' means disabled.",
+          "default": "!any"
+        },
+        {
+          "type": "list",
+          "variable": "device_name_reglist",
+          "namespace": "manage_fwupd",
+          "bundle": "allowed",
+          "label": "Allowed devices",
+          "subtype": {
+            "type": "string",
+            "label": "Device name pattern",
+            "question": "Device name (regex) to allow firmware updates for"
+          },
+          "while": "Do you want to allow firmware updates for more devices?"
+        },
+        {
+          "type": "string",
+          "variable": "reboot_after_update",
+          "namespace": "manage_fwupd",
+          "bundle": "allowed",
+          "label": "Reboot after firmware update",
+          "question": "Class expression for when to reboot after a firmware update is applied (e.g. 'any', 'Night', 'Hr04.Min00_05'). Default '!any' means disabled (no automatic reboot).",
+          "default": "!any"
+        }
       ]
     },
     "masterfiles": {
