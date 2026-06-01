@@ -6001,5 +6001,65 @@
       "by": "https://github.com/nickanderson",
       "repo": "https://github.com/cfengine/modules"
     }
+  },
+  "compliance-report-fwupd": {
+    "0.1.0": {
+      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "timestamp": 1780338973495,
+      "archive_url": "modules/compliance-report-fwupd/6d4d5d1da1866eef5fdd38601f519acbfb531d69.tar.gz",
+      "archive_sha256": "1578bac63b39d13688a68a2aaa730b86cb9e39bf33d64b53217587417b9b6778",
+      "readme_url": "modules/compliance-report-fwupd/6d4d5d1da1866eef5fdd38601f519acbfb531d69.org",
+      "readme_sha256": "be429bc9b08d3bd6e077ec4f10cc4c004039396e540b626db467273c2d2989fe",
+      "steps": [
+        "copy fwupd-compliance-report.json .no-distrib/compliance-report-definitions/fwupd-compliance-report.json"
+      ],
+      "subdirectory": "reporting/compliance-report-fwupd",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules",
+      "dependencies": [
+        "inventory-fwupd"
+      ]
+    }
+  },
+  "inventory-fwupd": {
+    "0.1.0": {
+      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "timestamp": 1780338974884,
+      "archive_url": "modules/inventory-fwupd/6d4d5d1da1866eef5fdd38601f519acbfb531d69.tar.gz",
+      "archive_sha256": "cd32dd1abef309e53a8273d98971044f65c8cea2b3c1f54a7edc97a7842b3a3b",
+      "readme_url": "modules/inventory-fwupd/6d4d5d1da1866eef5fdd38601f519acbfb531d69.org",
+      "readme_sha256": "92ee6e4be457f57328d2b63208076a4a0b8eb40ec4630e97799ffa6d6fb7ec18",
+      "steps": [
+        "copy policy.cf services/cfbs/modules/inventory-fwupd/policy.cf",
+        "copy fwupd-inventory.mustache services/cfbs/modules/inventory-fwupd/fwupd-inventory.mustache",
+        "policy_files services/cfbs/modules/inventory-fwupd/policy.cf",
+        "bundles inventory_fwupd_main"
+      ],
+      "subdirectory": "inventory/inventory-fwupd",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules"
+    }
+  },
+  "manage-fwupd": {
+    "0.1.0": {
+      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "timestamp": 1780338976222,
+      "archive_url": "modules/manage-fwupd/6d4d5d1da1866eef5fdd38601f519acbfb531d69.tar.gz",
+      "archive_sha256": "0984279b409e9ff443a1a327f3a60d74aa67300c363aa47b4a20743a95af67ab",
+      "readme_url": "modules/manage-fwupd/6d4d5d1da1866eef5fdd38601f519acbfb531d69.org",
+      "readme_sha256": "dc99df52be38c9bb1fe140c765a761e81b6422f55a2b9e0f0057b2e67f89d1a6",
+      "steps": [
+        "copy main.cf services/cfbs/modules/manage-fwupd/main.cf",
+        "policy_files services/cfbs/modules/manage-fwupd/main.cf",
+        "bundles manage_fwupd:allowed manage_fwupd:main",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "management/manage-fwupd",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules",
+      "dependencies": [
+        "inventory-fwupd"
+      ]
+    }
   }
 }
