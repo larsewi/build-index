@@ -74,6 +74,7 @@ jobs:
         if: hashFiles('git_diff_exists') != ''
         uses: cfengine/create-pull-request@v7
         with:
+          sign-commits: true
           title: versions.json changes by mirroring action
           body: ${{ steps.commit-message-from-file.outputs.body }}
           reviewers: |
