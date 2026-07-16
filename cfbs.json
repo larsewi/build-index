@@ -20,11 +20,11 @@
       "repo": "https://github.com/cfengine/modules",
       "subdirectory": "management/command-dispatcher",
       "by": "https://github.com/simonthalvorsen",
-      "version": "0.0.3",
-      "commit": "5ccc1f8b40d1b6b04525e768374d096d1ec59ec3",
+      "version": "0.0.4",
+      "commit": "6310f37e61a62a1bdf5f6fd5e907cb6ae3382ce9",
       "steps": [
         "copy main.cf services/cfbs/modules/command-dispatcher/main.cf",
-        "policy_files services/cfbs/command-dispatcher/main.cf",
+        "policy_files services/cfbs/modules/command-dispatcher/main.cf",
         "bundles command_dispatcher:main",
         "input ./input.json def.json"
       ],
