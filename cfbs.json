@@ -1344,6 +1344,53 @@
         }
       ]
     },
+    "policy-dispatcher": {
+      "description": "Policy dispatcher for running CFEngine policy snippets on schedule",
+      "tags": ["management", "experimental"],
+      "repo": "https://github.com/cfengine/modules",
+      "subdirectory": "management/policy-dispatcher",
+      "by": "https://github.com/olehermanse",
+      "version": "0.0.1",
+      "commit": "3e1f75ebf77fe9b6a761c0c15f9e57304bb7a9de",
+      "steps": [
+        "copy main.cf services/cfbs/modules/policy-dispatcher/main.cf",
+        "policy_files services/cfbs/modules/policy-dispatcher/main.cf",
+        "bundles policy_dispatcher:main",
+        "input ./input.json def.json"
+      ],
+      "input": [
+        {
+          "type": "list",
+          "variable": "policy_files_to_run",
+          "namespace": "policy_dispatcher",
+          "bundle": "main",
+          "label": "Policy",
+          "subtype": [
+            {
+              "key": "policy",
+              "type": "string",
+              "label": "Policy",
+              "question": "Policy snippet to save and run (must contain a main bundle)"
+            },
+            {
+              "key": "condition",
+              "type": "string",
+              "label": "Condition",
+              "question": "Condition for when to run",
+              "default": "any"
+            },
+            {
+              "key": "ifelapsed",
+              "type": "string",
+              "label": "ifelapsed",
+              "question": "Number of minutes between promise assessments",
+              "default": "5"
+            }
+          ],
+          "while": "Do you want to specify more policy snippets to be run?"
+        }
+      ]
+    },
     "prelinking-disabled": { "alias": "disable-prelinking" },
     "powershell-execution-policy": {
       "description": "Inventory and bundle for PowerShell Execution Policy",
