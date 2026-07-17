@@ -5902,6 +5902,23 @@
       "subdirectory": "management/command-dispatcher",
       "by": "https://github.com/simonthalvorsen",
       "repo": "https://github.com/cfengine/modules"
+    },
+    "0.0.6": {
+      "commit": "9788bf85ed28a5dd67d27b8021d3305aef5a3502",
+      "timestamp": 1784290732148,
+      "archive_url": "modules/command-dispatcher/9788bf85ed28a5dd67d27b8021d3305aef5a3502.tar.gz",
+      "archive_sha256": "4fbfa68c7446a7b9e4564631f56d0e90f702b48663ced4b8d8f86f3ae168fe38",
+      "readme_url": "modules/command-dispatcher/9788bf85ed28a5dd67d27b8021d3305aef5a3502.md",
+      "readme_sha256": "75a50f8cac9f55a639c4220382b3348d95cbc6ccb81c8d8a5b319b9984226e3f",
+      "steps": [
+        "copy main.cf services/cfbs/modules/command-dispatcher/main.cf",
+        "policy_files services/cfbs/modules/command-dispatcher/main.cf",
+        "bundles command_dispatcher:main",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "management/command-dispatcher",
+      "by": "https://github.com/simonthalvorsen",
+      "repo": "https://github.com/cfengine/modules"
     }
   },
   "promise-type-sshd": {
@@ -6109,6 +6126,25 @@
       "dependencies": [
         "inventory-fwupd"
       ]
+    }
+  },
+  "policy-dispatcher": {
+    "0.0.1": {
+      "commit": "3e1f75ebf77fe9b6a761c0c15f9e57304bb7a9de",
+      "timestamp": 1784290732921,
+      "archive_url": "modules/policy-dispatcher/3e1f75ebf77fe9b6a761c0c15f9e57304bb7a9de.tar.gz",
+      "archive_sha256": "569cd6379f98bb27f393f989b9428ca8e1906cc215aa56fa248cd2681d0f24a2",
+      "readme_url": "modules/policy-dispatcher/3e1f75ebf77fe9b6a761c0c15f9e57304bb7a9de.md",
+      "readme_sha256": "09df85184feadd48e942e7d1fbfb0546549f263cd010243c998f4b165ddefb70",
+      "steps": [
+        "copy main.cf services/cfbs/modules/policy-dispatcher/main.cf",
+        "policy_files services/cfbs/modules/policy-dispatcher/main.cf",
+        "bundles policy_dispatcher:main",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "management/policy-dispatcher",
+      "by": "https://github.com/olehermanse",
+      "repo": "https://github.com/cfengine/modules"
     }
   }
 }
