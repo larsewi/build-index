@@ -1,0 +1,9 @@
+trigger:build-website:
+  stage: .post
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      changes:
+        - versions.json
+  trigger:
+    project: Northern.tech/CFEngine/build-website
+    branch: production
