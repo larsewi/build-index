@@ -59,4 +59,5 @@ jobs:
           reviewers: |
             olehermanse
             nickanderson
-          branch: bump/${{ inputs.module }}
+          # The "pr-" prefix is exempt from the ruleset blocking branch creation
+          branch: pr-bump-${{ inputs.module }}
