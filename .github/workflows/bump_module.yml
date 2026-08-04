@@ -27,7 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checks-out repository
-        uses: actions/checkout@v7
+        # v7 is not compatible with cfengine/create-pull-request
+        uses: actions/checkout@v4
 
       - name: Install cfbs
         run: pip3 install cfbs
