@@ -1411,8 +1411,8 @@
       "tags": ["supported", "promise-type"],
       "repo": "https://github.com/cfengine/modules",
       "by": "https://github.com/tranchitella",
-      "version": "0.2.4",
-      "commit": "679c6c0b18cdb517c7595b1701c3707f47106da5",
+      "version": "1.0.0",
+      "commit": "cad59ba1d3316798a1d5b06d2a04a2ed6816986a",
       "subdirectory": "promise-types/ansible",
       "dependencies": ["library-for-promise-types-in-python"],
       "steps": [
