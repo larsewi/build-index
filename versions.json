@@ -6122,6 +6122,23 @@
       "subdirectory": "inventory/inventory-fwupd",
       "by": "https://github.com/nickanderson",
       "repo": "https://github.com/cfengine/modules"
+    },
+    "0.1.1": {
+      "commit": "709caa244087113854c9a8fdaff04c2c54a35587",
+      "timestamp": 1786558629922,
+      "archive_url": "modules/inventory-fwupd/709caa244087113854c9a8fdaff04c2c54a35587.tar.gz",
+      "archive_sha256": "9b61bfd2f41daba6a6b1ee5e8f3d09e3033f5165681742423fbf642262f95414",
+      "readme_url": "modules/inventory-fwupd/709caa244087113854c9a8fdaff04c2c54a35587.org",
+      "readme_sha256": "92ee6e4be457f57328d2b63208076a4a0b8eb40ec4630e97799ffa6d6fb7ec18",
+      "steps": [
+        "copy policy.cf services/cfbs/modules/inventory-fwupd/policy.cf",
+        "copy fwupd-inventory.mustache services/cfbs/modules/inventory-fwupd/fwupd-inventory.mustache",
+        "policy_files services/cfbs/modules/inventory-fwupd/policy.cf",
+        "bundles inventory_fwupd_main"
+      ],
+      "subdirectory": "inventory/inventory-fwupd",
+      "by": "https://github.com/nickanderson",
+      "repo": "https://github.com/cfengine/modules"
     }
   },
   "manage-fwupd": {
