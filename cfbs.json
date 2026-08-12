@@ -174,8 +174,8 @@
       "tags": ["reporting", "compliance", "security", "hardware"],
       "repo": "https://github.com/cfengine/modules",
       "by": "https://github.com/nickanderson",
-      "version": "0.1.0",
-      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "version": "0.1.1",
+      "commit": "1d55ad3666d2df4262ce1c5ee8d70a7c72a13944",
       "subdirectory": "reporting/compliance-report-fwupd",
       "dependencies": ["inventory-fwupd"],
       "steps": [
@@ -911,8 +911,8 @@
       "tags": ["inventory", "monitoring", "hardware", "security"],
       "repo": "https://github.com/cfengine/modules",
       "by": "https://github.com/nickanderson",
-      "version": "0.1.1",
-      "commit": "709caa244087113854c9a8fdaff04c2c54a35587",
+      "version": "0.1.2",
+      "commit": "1d55ad3666d2df4262ce1c5ee8d70a7c72a13944",
       "subdirectory": "inventory/inventory-fwupd",
       "steps": [
         "copy policy.cf services/cfbs/modules/inventory-fwupd/policy.cf",
@@ -1143,8 +1143,8 @@
       "tags": ["management", "hardware", "security"],
       "repo": "https://github.com/cfengine/modules",
       "by": "https://github.com/nickanderson",
-      "version": "0.1.0",
-      "commit": "6d4d5d1da1866eef5fdd38601f519acbfb531d69",
+      "version": "0.1.1",
+      "commit": "1d55ad3666d2df4262ce1c5ee8d70a7c72a13944",
       "subdirectory": "management/manage-fwupd",
       "dependencies": ["inventory-fwupd"],
       "steps": [
