@@ -161,8 +161,8 @@
       "tags": ["security", "compliance", "experimental"],
       "repo": "https://github.com/nickanderson/cfengine-lynis",
       "by": "https://github.com/nickanderson",
-      "version": "3.1.6",
-      "commit": "c427b0cfd854204a39b3c5aaea907d498577c764",
+      "version": "3.1.7",
+      "commit": "fe67a8a93cf0f1383380a77d73e3928358507a78",
       "subdirectory": "compliance-reports",
       "dependencies": ["compliance-report-imports", "lynis"],
       "steps": [
@@ -1059,8 +1059,8 @@
       "tags": ["security", "compliance"],
       "repo": "https://github.com/nickanderson/cfengine-lynis",
       "by": "https://github.com/nickanderson",
-      "version": "3.1.6",
-      "commit": "60b97c3e8784238d42ddb33532c7a86de7cde85d",
+      "version": "3.1.7",
+      "commit": "3bee500d2c4b48a4019ce0ad348b2d5987cc78da",
       "steps": [
         "copy policy/main.cf services/lynis/main.cf",
         "json cfbs/def.json def.json",
@@ -1074,7 +1074,7 @@
           "variable": "version",
           "label": "Lynis version",
           "question": "What version of Lynis should be used?",
-          "default": "3.1.6"
+          "default": "3.1.7"
         },
         {
           "type": "string",
@@ -1093,7 +1093,7 @@
           "variable": "archive_hash",
           "label": "Hash of the tarball",
           "question": "What is the hash of the tarball?",
-          "default": "0513f62ba5ab615c4333827b804237d58cf7bd623d09e1b4918d3fc85f08fc70"
+          "default": "b5314a07fd85fa3ffc7da57b508f0108ec3280d84e4af823f805d95cbbc2428c"
         },
         {
           "type": "string",
