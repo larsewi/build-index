@@ -1232,13 +1232,13 @@
       "tags": ["management", "inventory", "security"],
       "repo": "https://github.com/nickanderson/cfengine-packages-allowlist",
       "by": "https://github.com/nickanderson",
-      "version": "0.0.7",
-      "commit": "93bfbb81491d00e62ac5e46cd4f5dfb907a0ec6c",
+      "version": "0.0.8",
+      "commit": "353a8505bda91058cd9b005fb0d5c8e126169cd3",
       "steps": [
         "copy main.cf services/cfbs/modules/packages-allowlist/main.cf",
         "bundles packages_allowlist:state",
         "policy_files services/cfbs/modules/packages-allowlist/main.cf",
-        "input packages_allowlist/input.json def.json"
+        "input ./input.json def.json"
       ],
       "input": [
         {
