@@ -6340,5 +6340,23 @@
       "by": "https://github.com/olehermanse",
       "repo": "https://github.com/cfengine/modules"
     }
+  },
+  "install-ansible": {
+    "0.0.1": {
+      "commit": "04e1b09f7a863d20a132c33e7378d645aed0f99c",
+      "timestamp": 1787262709613,
+      "archive_url": "modules/install-ansible/04e1b09f7a863d20a132c33e7378d645aed0f99c.tar.gz",
+      "archive_sha256": "dda41e83c16de31f7a22e1d27c095f1fa9f6e2d4637e7214f5e2cc7bedb9234b",
+      "readme_url": "modules/install-ansible/04e1b09f7a863d20a132c33e7378d645aed0f99c.md",
+      "readme_sha256": "2a9967082f26f1151c66f67631a9f623c2e0775eaaeaa8cb36b93dad004a8fdc",
+      "steps": [
+        "copy software/install-ansible/install-ansible.cf services/cfbs/modules/software/install-ansible/install-ansible.cf",
+        "bundles install_ansible",
+        "policy_files services/cfbs/modules/software/install-ansible/install-ansible.cf"
+      ],
+      "subdirectory": "software/install-ansible",
+      "by": "https://github.com/craigcomstock",
+      "repo": "https://github.com/cfengine/modules"
+    }
   }
 }
