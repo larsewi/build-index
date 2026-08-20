@@ -598,6 +598,20 @@
         "policy_files services/cfbs/modules/install-aide/install-aide.cf"
       ]
     },
+    "install-ansible": {
+      "description": "Ensure that Ansible software is installed.",
+      "tags": ["experimental", "supported", "software", "ansible"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/craigcomstock",
+      "version": "0.0.1",
+      "commit": "04e1b09f7a863d20a132c33e7378d645aed0f99c",
+      "subdirectory": "software/install-ansible",
+      "steps": [
+        "copy software/install-ansible/install-ansible.cf services/cfbs/modules/software/install-ansible/install-ansible.cf",
+        "bundles install_ansible",
+        "policy_files services/cfbs/modules/software/install-ansible/install-ansible.cf"
+      ]
+    },
     "inventory-clamav": {
       "description": "Adds reporting data (inventory) for useful information from ClamAV (version, definitions version, definitions date).",
       "tags": ["supported", "inventory", "security"],
