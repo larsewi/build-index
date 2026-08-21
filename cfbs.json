@@ -607,7 +607,7 @@
       "commit": "04e1b09f7a863d20a132c33e7378d645aed0f99c",
       "subdirectory": "software/install-ansible",
       "steps": [
-        "copy software/install-ansible/install-ansible.cf services/cfbs/modules/software/install-ansible/install-ansible.cf",
+        "copy install-ansible.cf services/cfbs/modules/software/install-ansible/install-ansible.cf",
         "bundles install_ansible",
         "policy_files services/cfbs/modules/software/install-ansible/install-ansible.cf"
       ]
