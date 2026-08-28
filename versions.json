@@ -4020,6 +4020,30 @@
         "autorun",
         "promise-type-groups"
       ]
+    },
+    "1.9.0": {
+      "commit": "c918e73cbeb5897d3a2ddbadaa4c4cfa53b6e7c8",
+      "timestamp": 1787928435375,
+      "archive_url": "modules/surf-cfengine-library/c918e73cbeb5897d3a2ddbadaa4c4cfa53b6e7c8.tar.gz",
+      "archive_sha256": "aa5eeb759ea46192a40a37cdea3b8c1cad8f08008fdd687b075bd0ae0ed424a6",
+      "readme_url": "modules/surf-cfengine-library/c918e73cbeb5897d3a2ddbadaa4c4cfa53b6e7c8.md",
+      "readme_sha256": "da804a4477e762f5b898f98383ed51d52f5504aadad4e80cd0f8a029a223fb75",
+      "steps": [
+        "copy ./masterfiles/lib/scl/ lib/scl/",
+        "copy ./masterfiles/services/autorun/scl.cf services/autorun/scl.cf",
+        "copy ./modules/ modules/scl/",
+        "copy ./scl_example.json scl_example.json",
+        "copy ./services/ services/scl/",
+        "copy ./templates/ lib/scl/.git/templates",
+        "json scl_example.json def.json"
+      ],
+      "subdirectory": "",
+      "by": "https://codeberg.org/basvandervlies",
+      "repo": "https://codeberg.org/SURF/scl",
+      "dependencies": [
+        "autorun",
+        "promise-type-groups"
+      ]
     }
   },
   "compliance-report-lynis": {
