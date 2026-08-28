@@ -131,6 +131,18 @@
       ]
     },
     "cir": { "alias": "client-initiated-reporting" },
+    "clamav": {
+      "description": "Automates the installation, scanning, and reporting of ClamAV antivirus software.",
+      "tags": ["experimental", "inventory", "security"],
+      "repo": "https://github.com/aleksandrychev/cfengine-clamav",
+      "by": "https://github.com/aleksandrychev",
+      "version": "0.0.1",
+      "commit": "22d343780603a6c81113a7e81a5d75ba36b536f0",
+      "steps": [
+        "copy policy/main.cf services/cfbs/modules/clamav/main.cf",
+        "json cfbs/def.json def.json"
+      ]
+    },
     "client-initiated": { "alias": "client-initiated-reporting" },
     "client-initiated-reporting": {
       "description": "Enables client initiated reporting and disable pull collection.",
