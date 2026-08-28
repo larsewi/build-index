@@ -1,5 +1,8 @@
+stages:
+  - trigger-website-build
+
 trigger:build-website:
-  stage: .post
+  stage: trigger-website-build
   rules:
     - if: '$CI_COMMIT_BRANCH == "master"'
       changes:
