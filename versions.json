@@ -6414,5 +6414,22 @@
       "by": "https://github.com/craigcomstock",
       "repo": "https://github.com/cfengine/modules"
     }
+  },
+  "clamav": {
+    "0.0.1": {
+      "commit": "22d343780603a6c81113a7e81a5d75ba36b536f0",
+      "timestamp": 1787940899988,
+      "archive_url": "modules/clamav/22d343780603a6c81113a7e81a5d75ba36b536f0.tar.gz",
+      "archive_sha256": "690c78cce0889cb34cdcbb38c8b3212f5059d88baad461c44d8838927920d12b",
+      "readme_url": "modules/clamav/22d343780603a6c81113a7e81a5d75ba36b536f0.md",
+      "readme_sha256": "a76fdee915475e0294954fa60e56af5374ca4c75a9e27d91869f69eeda5b7fc2",
+      "steps": [
+        "copy policy/main.cf services/cfbs/modules/clamav/main.cf",
+        "json cfbs/def.json def.json"
+      ],
+      "subdirectory": "",
+      "by": "https://github.com/aleksandrychev",
+      "repo": "https://github.com/aleksandrychev/cfengine-clamav"
+    }
   }
 }
