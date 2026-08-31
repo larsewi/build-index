@@ -136,8 +136,8 @@
       "tags": ["experimental", "inventory", "security"],
       "repo": "https://github.com/aleksandrychev/cfengine-clamav",
       "by": "https://github.com/aleksandrychev",
-      "version": "0.0.1",
-      "commit": "22d343780603a6c81113a7e81a5d75ba36b536f0",
+      "version": "0.0.2",
+      "commit": "195651975fae99f2aa8bb03840e9be0b9484e49a",
       "steps": [
         "copy policy/main.cf services/cfbs/modules/clamav/main.cf",
         "json cfbs/def.json def.json"
