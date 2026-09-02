@@ -1215,6 +1215,40 @@
         }
       ]
     },
+    "manage-swap": {
+      "description": "Ensure a swap file of the configured size exists, is active and is persisted in /etc/fstab. Reports active swap files and total swap size as inventory.",
+      "tags": ["management", "inventory", "experimental"],
+      "repo": "https://github.com/aleksandrychev/cfengine-manage-swap",
+      "by": "https://github.com/aleksandrychev",
+      "version": "0.1.0",
+      "commit": "264c6dd0c8d3f36042f7491630ad04dc0d713efe",
+      "steps": [
+        "copy policy/main.cf services/cfbs/modules/manage-swap/main.cf",
+        "policy_files services/cfbs/modules/manage-swap/main.cf",
+        "bundles manage_swap:main",
+        "input ./input.json def.json"
+      ],
+      "input": [
+        {
+          "type": "string",
+          "variable": "swap_size_gb",
+          "namespace": "manage_swap",
+          "bundle": "main",
+          "label": "Swap size (GB)",
+          "question": "Size of the swap file in GB (e.g. '2' or '0.5')",
+          "default": "2"
+        },
+        {
+          "type": "string",
+          "variable": "swap_file_path",
+          "namespace": "manage_swap",
+          "bundle": "main",
+          "label": "Swap file path",
+          "question": "Absolute path of the swap file",
+          "default": "/swapfile"
+        }
+      ]
+    },
     "masterfiles": {
       "description": "Official CFEngine Masterfiles Policy Framework (MPF).",
       "tags": ["supported", "base"],
