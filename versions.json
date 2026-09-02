@@ -6465,5 +6465,24 @@
         "compliance-report-imports"
       ]
     }
+  },
+  "manage-swap": {
+    "0.1.0": {
+      "commit": "264c6dd0c8d3f36042f7491630ad04dc0d713efe",
+      "timestamp": 1788354725497,
+      "archive_url": "modules/manage-swap/264c6dd0c8d3f36042f7491630ad04dc0d713efe.tar.gz",
+      "archive_sha256": "60c349c1d0585f0c1613169201f493f8bc02d93a0572d8ac74f1c84bd9179093",
+      "readme_url": "modules/manage-swap/264c6dd0c8d3f36042f7491630ad04dc0d713efe.md",
+      "readme_sha256": "ddf81a4f486e3e137242bf353d2532ec02f85d93a488609220eab8a7a1f3ff37",
+      "steps": [
+        "copy policy/main.cf services/cfbs/modules/manage-swap/main.cf",
+        "policy_files services/cfbs/modules/manage-swap/main.cf",
+        "bundles manage_swap:main",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "",
+      "by": "https://github.com/aleksandrychev",
+      "repo": "https://github.com/aleksandrychev/cfengine-manage-swap"
+    }
   }
 }
