@@ -136,8 +136,8 @@
       "tags": ["compliance", "experimental", "inventory", "security"],
       "repo": "https://github.com/aleksandrychev/cfengine-clamav",
       "by": "https://github.com/aleksandrychev",
-      "version": "0.0.3",
-      "commit": "3f9655b469ee45eb2bd3d1c91d8c5476f42e6aac",
+      "version": "0.1.0",
+      "commit": "6ebb89d7d54966b4a8cdbe8d68e510e47086fba8",
       "dependencies": ["compliance-report-imports"],
       "steps": [
         "copy policy/main.cf services/cfbs/modules/clamav/main.cf",
