@@ -1526,6 +1526,7 @@
       "dependencies": ["library-for-promise-types-in-python"],
       "steps": [
         "copy ansible_promise.py modules/promises/",
+        "copy ansible_promise.sh modules/promises/",
         "append enable.cf services/init.cf"
       ]
     },
