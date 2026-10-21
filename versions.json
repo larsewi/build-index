@@ -6686,6 +6686,26 @@
       "dependencies": [
         "promise-type-ansible"
       ]
+    },
+    "0.1.1": {
+      "commit": "1de33dc162599143e841f30bb9da21295beaef19",
+      "timestamp": 1792513218440,
+      "archive_url": "modules/ansible-playbook-dispatcher/1de33dc162599143e841f30bb9da21295beaef19.tar.gz",
+      "archive_sha256": "af9414dc0dd8798e8fc58b579d74e06680675a28ab17e86a7c87a5b2dd677d15",
+      "readme_url": "modules/ansible-playbook-dispatcher/1de33dc162599143e841f30bb9da21295beaef19.md",
+      "readme_sha256": "870cf3a19f27cf3febc33afbcda0b8056171ee39a5495a164c08df8e48ce151d",
+      "steps": [
+        "copy main.cf services/cfbs/modules/ansible-playbook-dispatcher/main.cf",
+        "policy_files services/cfbs/modules/ansible-playbook-dispatcher/main.cf",
+        "bundles ansible_playbook_dispatcher:main",
+        "input ./input.json def.json"
+      ],
+      "subdirectory": "management/ansible-playbook-dispatcher",
+      "by": "https://github.com/larsewi",
+      "repo": "https://github.com/cfengine/modules",
+      "dependencies": [
+        "promise-type-ansible"
+      ]
     }
   },
   "promise-type-yaml": {
